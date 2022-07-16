@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+        {% set title='InDeX' %}
+    {% block title %}{{ title }} Page{% endblock %}
+
+{% block tohen %}
+    <div id="container1">
+    <div id="container3">
+
+     <div class="center">
+
+        <div class="case1">
+
+            <form action="URL" method="post">
+                <label for="Full name">שם מלא</label><br>
+                <input type="text" maxlength="20" id="full name" placeholder="full name" name="Full name"><br>
+                <label for="email">email</label><br>
+                <input type="email" id="email" name="email" placeholder="email"><br>
+                <label for="password">password</label><br>
+                <input type="password" maxlength="20" name="password" id="password" placeholder="password"><br><br>
+
+
+
+                <label for="user-text">פרטים נוספים</label><br>
+                <textarea name="user-text" cols="30" rows="6" placeholder="Enter yout text:"></textarea><br>
+
+                <label for="choose">רמת גלישה</label><br>
+                <input type="radio" name="choose">מתחילים
+                <input type="radio" name="choose">חובבנים
+                <input type="radio" name="choose">מקצוענים
+
+                <br>
+
+                <div class="ull">
+                    <ul>
+                        <li><a href="url">שלח!</a> </li>
+                    </ul>
+                </div>
+
+            </form>
+
+
+
+        </div>
+     </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

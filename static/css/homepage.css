@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Secular+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
+
+
+body {
+
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+
+
+#container {
+
+  background-color: #db11e2df;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'Main Main Nav'
+    'Main Main Nav'
+    'footer footer footer';
+
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+#container div {
+  padding: 10px;
+  border: 0.5px solid black;
+}
+
+.content1 {
+  grid-area: Main;
+}
+
+.content2 {
+  grid-area: Nav;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.spiese{
+    display: inline-block;
+}
+
+#container>div {
+  background: url("../pics/kite-surfing-1620343.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.5s ease-in;
+}
+
+
+.content1:hover {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+/* --------------- HAD+NEV BAR---------------- */
+
+/* --------------- HAD+NEV AND---------------- */
+
+
+
+.hadd {
+  padding: 5px;
+  text-align: center;
+}
+
+.Had {
+  padding: 10px;
+  background: #383138;
+  color: rgb(0, 0, 0);
+  font-size: 70px;
+  text-align: center;
+  color: #db11e2df;
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+
+}
+
+
+a {
+  font-family: 'Secular One', sans-serif;
+  font-size: 20px;
+  background-color: #eaf1cfdf;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  margin: auto 15px;
+  padding: 5px;
+  color: #383138;
+
+  animation: rainbow2 5s ease-in-out 0.5s 1;
+}
+
+.input{
+  font-family: 'Secular One', sans-serif;
+  font-size: 15px;
+  background-color: #eaf1cfdf;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  margin: auto 15px;
+  padding: 5px;
+  color: #383138;
+  margin: 10px 10px;
+
+
+}
+
+
+@keyframes rainbow {
+  66% {
+    color: blue;
+  }
+}
+
+@keyframes rainbow2 {
+  66% {
+    color: rgb(194, 238, 34);
+  }
+}
+footer{
+  text-align: center;
+}
+
+
+.product{
+  margin: 50px auto;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: #98a463;
+  border-radius: 50px;
+  width: 500px;
+
+}
+
+
+.container {
+    border: darkgrey 3px solid;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+    padding: 10px;
+    align-content: center;
+}
+
+
+/*---------------------------for mobail-----------------------------*/
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightskyblue;
+  }
+
+  #container {
+    display: grid;
+    grid-template-areas:
+      'Nav'
+      'Main'
+      'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  .links {
+    display: none;
+  }
+
+  #perppel {
+    display: none;
+  }
+
+  #yellow {
+    display: none;
+  }
+
+  #red {
+    display: none;
+  }
+
+  #blue {
+    display: none;
+  }
+
+}
+
+.active {
+  background-color: #9ba576df;
+}
+
+li {
+  list-style: none;
+}
+
+/*    -----contact------    */
+
+/* colors */
+
+#blue {
+  background-color: rgb(139, 139, 226);
+  border: none;
+  padding: 5px;
+    border-radius: 50%;
+
+}
+
+#red {
+  background-color: rgb(201, 78, 78);
+  border: none;
+  padding: 5px;
+   border-radius: 50%;
+
+}
+
+#yellow {
+  background-color: rgb(148, 209, 7);
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+
+}
+
+#perppel {
+  background-color: rgb(221, 18, 211);
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+
+}

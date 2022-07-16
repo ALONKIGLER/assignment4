@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Log In{% endblock %}
+
+{% block tohen %}
+
+
+
+    {% if session['logedin'] %}
+        <h1>Welcome, {{ session['username'] | upper() }}</h1>
+    {% else %}
+        <h1>Welcome, place Log-In Page</h1>
+        {% if message %}
+            <h2>{{ message }}</h2>
+        {% endif %}
+        <h2>Login Form:</h2>
+
+        <form action="/log_in" method="post">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit">
+        </form>
+
+    {% endif %}
+
+{% endblock %}

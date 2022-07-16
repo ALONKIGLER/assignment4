@@ -1,0 +1,37 @@
+<header>
+
+    <div class="hadd">
+
+       <div class="Had">
+            מועדון הקייט של סיני
+        </div>
+
+
+        <div class="links">
+                <li> <a href="/">Home Page</a> | </li>
+               <li><a href="/users">Users</a> | </li>
+{#              <li> <a href="/catalog">Catalog</a> | </li>#}
+               <li> <a href="/assignment4_fetch_fe">fatch front</a> | </li>
+               <li> <a href="/assignment4_fetch_be">fatch back</a> | </li>
+{#                <li> <a href="/contact">contact</a> | </li>#}
+                {% if session['logedin'] %}
+                    <li>  <a href="/log_out">Log Out</a> </li>
+                {% else %}
+                   <li>   <a href="/log_in">Log In</a></li>
+            {% endif %}
+
+
+        </div>
+
+        <button id="blue" onclick="changeColreblue()"></button>
+        <button id="red" onclick="changeColrered()"></button>
+        <button id="yellow" onclick="changeColreyellw()"></button>
+        <button id="perppel" onclick="changeColreperppel()"></button>
+
+
+    </div>
+
+</header>
+
+
+

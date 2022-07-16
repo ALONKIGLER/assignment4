@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Catalog{% endblock %}
+
+{% block tohen %}
+
+
+<form action="/catalog" >
+    <br>
+    <input type="text" name="user_name" placeholder="Insert Name">
+    <input type="submit" value = "Find">
+</form>
+
+{% if user_name  %}
+           <div class="product">
+        <h1>kite Name: {{ user_name }} </h1>
+        <h2>kite size: {{ user.size }}</h2>
+        <h2>kite price: {{ user.price }}</h2>
+         <img src="{{ pic1_name }}" alt="Mike" height="240px" width="200px">
+         </div>
+{% endif %}
+
+
+    {% if users %}
+        <br>
+        {% for user in users %}
+                    <div class="product">
+                    <h1>kite Name: {{ user.name }} </h1>
+                    <h2>kite size: {{ user.size }}</h2>
+                        <h2>kite price: {{ user.price }}</h2>
+                    </div>
+
+                <br>
+           {% endfor %}
+    {% endif %}
+
+
+    {% if message %}
+        <h3 style="color: red">{{message}}</h3>
+    {% endif %}
+
+
+{% endblock %}
+{{ super() }}

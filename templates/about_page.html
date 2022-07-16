@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}About Page{% endblock %}
+
+{% block tohen %}
+
+
+    {% if user_info %}
+        <div class="container">
+        <h2>User Info</h2>
+        <br>
+            {% for title, value in user_info.items() %}
+                <h3>{{ title }}: {{ value }}</h3>
+            {% endfor %}
+    </div>
+    {% else %}
+        <h3>Please log in</h3>
+    {% endif %}
+
+{% endblock %}

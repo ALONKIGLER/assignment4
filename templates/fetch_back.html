@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}fetch BackEnd{% endblock %}
+
+{% block tohen %}
+
+
+    <h3>please insert the number of user: </h3>
+    <form action="/assignment4_fetch_be" method="get">
+        user number (order in list):
+        <input type="text" name="num">
+        <input type="hidden" name="type" value="sync">
+        <input type="submit" value="Get the parsenal">
+    </form>
+
+
+    {% if session.userr %}
+        {% for user in session.userr%}
+            <img src="{{ user.sprites}}" alt="pic">
+            <h4>first name: {{ user.first_name }}</h4>
+            <h4>last name: {{ user.last_name }}</h4>
+            <h4>user email: {{ user.email }}</h4>
+            <hr>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
